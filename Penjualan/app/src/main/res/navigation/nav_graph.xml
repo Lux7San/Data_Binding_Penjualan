@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/blankFragmentMain">
+
+    <fragment
+        android:id="@+id/blankFragmentMain"
+        android:name="com.example.penjualan.BlankFragmentMain"
+        android:label="fragment_blank_main"
+        tools:layout="@layout/fragment_blank_main" >
+        <action
+            android:id="@+id/action_blankFragmentMain_to_blankFragmentDetail"
+            app:destination="@id/blankFragmentDetail" />
+        <argument
+            android:name="idPembeli"
+            app:argType="string"
+            android:defaultValue="idPembeli" />
+        <argument
+            android:name="namaPembeli"
+            app:argType="string"
+            android:defaultValue="namaPembeli" />
+        <argument
+            android:name="judulBuku"
+            app:argType="string" />
+        <argument
+            android:name="jumlahBeli"
+            app:argType="string"
+            android:defaultValue="jumlahBeli" />
+        <argument
+            android:name="harga"
+            app:argType="string"
+            android:defaultValue="harga" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragmentDetail"
+        android:name="com.example.penjualan.BlankFragmentDetail"
+        android:label="fragment_blank_detail"
+        tools:layout="@layout/fragment_blank_detail" />
+</navigation>
